@@ -119,7 +119,7 @@ def run_all_evaluations():
 
     report = generate_evaluation_report(evaluations)
 
-    with open("results/evaluation_report.md", "w") as f:
+    with open("results/evaluation_report.md", "w", encoding="utf-8") as f:
         f.write(report)
 
     print(f"Evaluation report saved to results/evaluation_report.md")

@@ -53,10 +53,19 @@ def run_challenge(number: int):
         return
 
     challenge = CHALLENGES[number]
+    failure_rate = 0.5 if number == 8 else 0.0
+
+    if failure_rate > 0:
+        print(f"Challenge 8: Failure simulation at {failure_rate*100:.0f}%")
 
     from agent.core import run_agent
+    import time
 
-    result = run_agent(challenge["query"])
+    start = time.time()
+    result = run_agent(challenge["query"], failure_rate=failure_rate)
+    duration = time.time() - start
+
+    result["duration_seconds"] = duration
 
     report = result.get("final_report", "No report generated")
     if isinstance(report, list):
@@ -68,18 +77,62 @@ def run_challenge(number: int):
     with open(challenge["file"], "w", encoding="utf-8") as f:
         f.write(report)
 
+    # Run evaluation
+    try:
+        from evaluation.benchmark_runner import run_evaluation
+        evaluation = run_evaluation(report, result, number, challenge["query"])
+
+        eval_file = challenge["file"].replace(".md", "_eval.json")
+        with open(eval_file, "w") as f:
+            import json
+            json.dump(evaluation, f, indent=2)
+
+        print(f"\nEvaluation Score: {evaluation['overall_score']:.1%}")
+        print(f"Metrics Passed: {evaluation['automated_metrics']['metrics_passed']}/22")
+
+    except Exception as e:
+        print(f"Evaluation error: {e}")
+
     print(f"\n{'='*60}")
     print(f"REPORT SAVED TO {challenge['file']}")
     print(f"{'='*60}")
     print(f"\nFirst 300 characters:")
     print(report[:300])
 
+def run_all_evaluations():
+    """Run all 8 challenges and generate master evaluation report"""
+
+    import json
+    from evaluation.benchmark_runner import generate_evaluation_report
+
+    evaluations = []
+
+    for i in range(1, 9):
+        eval_file = CHALLENGES[i]["file"].replace(".md", "_eval.json")
+        if os.path.exists(eval_file):
+            with open(eval_file) as f:
+                evaluations.append(json.load(f))
+
+    if not evaluations:
+        print("No evaluation files found. Run challenges first.")
+        return
+
+    report = generate_evaluation_report(evaluations)
+
+    with open("results/evaluation_report.md", "w") as f:
+        f.write(report)
+
+    print(f"Evaluation report saved to results/evaluation_report.md")
+    print(f"Challenges evaluated: {len(evaluations)}/8")
 
 def main():
-    # Get challenge number from command line or default to 1
     if len(sys.argv) > 1:
+        arg = sys.argv[1]
+        if arg == "eval":
+            run_all_evaluations()
+            return
         try:
-            challenge_num = int(sys.argv[1])
+            challenge_num = int(arg)
         except ValueError:
             challenge_num = 1
     else:

@@ -18,7 +18,7 @@
     "NewsAPI"
   ],
   "duration_days": 15,
-  "github_repo_url": "https://github.com/study123aman-prog/financial-research-agent.git",
+  "github_repo_url": "https://github.com/study123aman-prog/financial-research-agent-mine.git",
   "assessment_criteria": {
     "architecture_design": true,
     "tool_orchestration": true,

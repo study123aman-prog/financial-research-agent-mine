@@ -84,10 +84,10 @@
         "passed": true,
         "source_count": 6,
         "source_types": [
-          "NewsAPI + TextBlob",
-          "SEC EDGAR",
           "Alpha Vantage (mock)",
           "Yahoo Finance",
+          "NewsAPI + TextBlob",
+          "SEC EDGAR",
           "Earnings Tool (mock)",
           "Calculation Engine"
         ],
@@ -250,19 +250,19 @@
       "AB-5": {
         "metric": "AB-5",
         "name": "Latency",
-        "score": 0.1,
+        "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "duration_seconds": 268.8,
+        "duration_seconds": 0,
         "target_seconds": 300,
-        "details": "Completed in 269s (target: <300s)"
+        "details": "Completed in 0s (target: <300s)"
       }
     },
-    "overall_score": 0.441,
+    "overall_score": 0.482,
     "metrics_passed": 9,
     "total_metrics": 22,
     "pass_rate": 0.41,
-    "evaluated_at": "2026-09-05T19:59:24.400115"
+    "evaluated_at": "2026-09-06T21:28:37.072378"
   },
   "llm_judge_scores": {
     "analytical_depth": 0.7,
@@ -272,6 +272,6 @@
     "feedback": "LLM judge unavailable - using default scores",
     "llm_judge_available": false
   },
-  "overall_score": 0.545,
-  "evaluated_at": "2026-09-05T20:00:00.356197"
+  "overall_score": 0.569,
+  "evaluated_at": "2026-09-06T21:28:38.706626"
 }

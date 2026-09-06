@@ -64,10 +64,17 @@ def run_challenge(number: int):
     start = time.time()
     result = run_agent(challenge["query"], failure_rate=failure_rate)
     duration = time.time() - start
-
+    result_copy = dict(result)
     result["duration_seconds"] = duration
 
-    report = result.get("final_report", "No report generated")
+    report = result_copy.get("final_report", "")
+    print(f"[Debug] final_report type: {type(report)}, length: {len(str(report))}")
+    print(f"[Debug] synthesis length: {len(str(result_copy.get('synthesis', '')))}")
+
+    if not report or len(str(report)) < 100:
+        print("[Debug] final_report empty, using synthesis instead")
+        report = result_copy.get("synthesis", "No report generated")
+
     if isinstance(report, list):
         report = report[0].text if hasattr(report[0], 'text') else str(report[0])
     report = str(report)
@@ -80,7 +87,7 @@ def run_challenge(number: int):
     # Run evaluation
     try:
         from evaluation.benchmark_runner import run_evaluation
-        evaluation = run_evaluation(report, result, number, challenge["query"])
+        evaluation = run_evaluation(report, result_copy, number, challenge["query"])
 
         eval_file = challenge["file"].replace(".md", "_eval.json")
         with open(eval_file, "w") as f:

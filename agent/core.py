@@ -475,6 +475,8 @@ def run_agent(query: str, failure_rate: float = 0.0) -> Dict[str, Any]:
     # Build and run agent
     agent = build_agent()
     final_state = agent.invoke(initial_state)
+    # Debug - check what final_report contains
+    report = final_state.get("final_report", "")
 
     # Save session to episodic memory
     try:

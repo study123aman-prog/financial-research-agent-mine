@@ -9,9 +9,9 @@
         "score": 0.3,
         "target": 0.98,
         "passed": false,
-        "numbers_found": 2,
+        "numbers_found": 224,
         "real_sources": 0,
-        "details": "2 numerical claims, 0 real sources"
+        "details": "224 numerical claims, 0 real sources"
       },
       "FA-2": {
         "metric": "FA-2",
@@ -22,50 +22,60 @@
         "total_sources": 8,
         "real_sources": 8,
         "mock_sources": 0,
-        "cited_in_report": [],
+        "cited_in_report": [
+          "Yahoo Finance",
+          "Alpha Vantage",
+          "SEC EDGAR",
+          "Yahoo Finance",
+          "Calculation Engine",
+          "Yahoo Finance",
+          "Alpha Vantage"
+        ],
         "details": "8/8 sources are real"
       },
       "FA-3": {
         "metric": "FA-3",
         "name": "Temporal Accuracy",
-        "score": 0.5,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "years_referenced": [],
+        "passed": true,
+        "years_referenced": [
+          "2025",
+          "2026"
+        ],
         "future_years_found": [],
-        "details": "Found 0 valid year references, 0 future dates"
+        "details": "Found 5 valid year references, 0 future dates"
       },
       "FA-4": {
         "metric": "FA-4",
         "name": "Entity Accuracy",
-        "score": 0.0,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "entities_found": [],
-        "entities_missing": [
+        "passed": true,
+        "entities_found": [
           "AAPL"
         ],
-        "details": "0/1 expected entities found in report"
+        "entities_missing": [],
+        "details": "1/1 expected entities found in report"
       },
       "FA-5": {
         "metric": "FA-5",
         "name": "Hallucination Rate",
-        "score": 1.0,
+        "score": 0.46,
         "target": 1.0,
-        "passed": true,
-        "total_claims": 2,
-        "untraced_claims": 0,
-        "hallucination_rate": 0.0,
-        "details": "0 potentially unverified numerical claims"
+        "passed": false,
+        "total_claims": 224,
+        "untraced_claims": 120,
+        "hallucination_rate": 0.536,
+        "details": "120 potentially unverified numerical claims"
       },
       "CO-1": {
         "metric": "CO-1",
         "name": "Section Coverage",
-        "score": 0.0,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "sections_found": [],
-        "sections_missing": [
+        "passed": true,
+        "sections_found": [
           "executive summary",
           "company overview",
           "financial analysis",
@@ -73,7 +83,8 @@
           "competitive position",
           "methodology"
         ],
-        "details": "0/6 sections present"
+        "sections_missing": [],
+        "details": "6/6 sections present"
       },
       "CO-2": {
         "metric": "CO-2",
@@ -81,45 +92,56 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "source_count": 6,
+        "source_count": 5,
         "source_types": [
           "Calculation Engine",
-          "SEC EDGAR",
-          "Earnings Tool (mock)",
           "NewsAPI + TextBlob",
-          "Alpha Vantage (mock)",
+          "SEC EDGAR",
+          "Alpha Vantage",
           "Yahoo Finance"
         ],
-        "details": "6 distinct source types used (target: 4+)"
+        "details": "5 distinct source types used (target: 4+)"
       },
       "CO-3": {
         "metric": "CO-3",
         "name": "Temporal Coverage",
-        "score": 0.0,
+        "score": 0.67,
         "target": 1.0,
         "passed": false,
-        "details": "No year references found in report"
+        "years_found": [
+          2025,
+          2026
+        ],
+        "year_range": 2,
+        "details": "Covers 2 years from 2025 to 2026"
       },
       "CO-4": {
         "metric": "CO-4",
         "name": "Risk Factor Coverage",
-        "score": 0.0,
+        "score": 0.5,
         "target": 0.8,
         "passed": false,
-        "risks_identified": [],
+        "risks_identified": [
+          "regulatory",
+          "market",
+          "operational",
+          "financial",
+          "technology",
+          "interest rate"
+        ],
         "total_risk_categories": 12,
-        "details": "0/12 risk categories covered"
+        "details": "6/12 risk categories covered"
       },
       "AD-1": {
         "metric": "AD-1",
         "name": "Insight Density",
-        "score": 0.0,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "insight_count": 0,
-        "estimated_pages": 1,
-        "density_per_page": 0.0,
-        "details": "0 insights across 1 pages = 0.0/page"
+        "passed": true,
+        "insight_count": 14,
+        "estimated_pages": 2.2,
+        "density_per_page": 6.3,
+        "details": "14 insights across 2.2 pages = 6.3/page"
       },
       "AD-2": {
         "metric": "AD-2",
@@ -133,30 +155,30 @@
       "AD-3": {
         "metric": "AD-3",
         "name": "Quantitative Reasoning",
-        "score": 0.0,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "calculations_found": 0,
-        "details": "0 quantitative references found (target 10+)"
+        "passed": true,
+        "calculations_found": 75,
+        "details": "75 quantitative references found (target 10+)"
       },
       "AD-4": {
         "metric": "AD-4",
         "name": "Forward-Looking Analysis",
-        "score": 0.0,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "forward_references": 1,
-        "sections_estimated": 0,
-        "details": "1 forward-looking references, ~0 sections"
+        "passed": true,
+        "forward_references": 16,
+        "sections_estimated": 5,
+        "details": "16 forward-looking references, ~5 sections"
       },
       "CS-1": {
         "metric": "CS-1",
         "name": "Logical Flow",
-        "score": 0.5,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "sections_found": 0,
-        "details": "Sections appear in incorrect order"
+        "passed": true,
+        "sections_found": 6,
+        "details": "Sections appear in correct order"
       },
       "CS-2": {
         "metric": "CS-2",
@@ -170,25 +192,28 @@
       "CS-3": {
         "metric": "CS-3",
         "name": "Executive Summary Quality",
-        "score": 0.5,
+        "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "details": "Summary section not found by name but report may contain summary"
+        "word_count": 210,
+        "has_numbers": true,
+        "has_company_reference": true,
+        "details": "Executive summary: 210 words"
       },
       "CS-4": {
         "metric": "CS-4",
         "name": "Professional Formatting",
-        "score": 0.0,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
+        "passed": true,
         "checks": {
-          "has_headers": false,
-          "has_bold": false,
-          "adequate_length": false,
-          "has_date": false,
-          "has_content": false
+          "has_headers": true,
+          "has_bold": true,
+          "adequate_length": true,
+          "has_date": true,
+          "has_content": true
         },
-        "details": "0/5 formatting checks passed"
+        "details": "5/5 formatting checks passed"
       },
       "AB-1": {
         "metric": "AB-1",
@@ -245,28 +270,28 @@
       "AB-5": {
         "metric": "AB-5",
         "name": "Latency",
-        "score": 0,
+        "score": 0.3,
         "target": 1.0,
-        "passed": false,
-        "duration_seconds": 381.8,
+        "passed": true,
+        "duration_seconds": 210.4,
         "target_seconds": 300,
-        "details": "Completed in 382s (target: <300s)"
+        "details": "Completed in 210s (target: <300s)"
       }
     },
-    "overall_score": 0.423,
-    "metrics_passed": 9,
+    "overall_score": 0.806,
+    "metrics_passed": 17,
     "total_metrics": 22,
-    "pass_rate": 0.41,
-    "evaluated_at": "2026-09-05T19:53:38.371467"
+    "pass_rate": 0.77,
+    "evaluated_at": "2026-09-06T15:02:42.538551"
   },
   "llm_judge_scores": {
-    "analytical_depth": 0.7,
-    "narrative_quality": 0.7,
-    "insight_originality": 0.6,
-    "actionability": 0.7,
-    "feedback": "LLM judge unavailable - using default scores",
-    "llm_judge_available": false
+    "llm_judge_available": true,
+    "analytical_depth": 0.8,
+    "narrative_quality": 0.9,
+    "insight_originality": 0.65,
+    "actionability": 0.8,
+    "feedback": "The report is exceptionally well-structured and offers clear quantitative comparisons with rigorous citations, though its strategic insights largely reflect standard market consensus.', 'extras': {'signature': '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'}}"
   },
-  "overall_score": 0.534,
-  "evaluated_at": "2026-09-05T19:54:15.105801"
+  "overall_score": 0.819,
+  "evaluated_at": "2026-09-06T15:03:09.341627"
 }

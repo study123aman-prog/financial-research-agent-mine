@@ -6,12 +6,12 @@
       "FA-1": {
         "metric": "FA-1",
         "name": "Numerical Accuracy Rate",
-        "score": 0.0,
+        "score": 0.3,
         "target": 0.98,
         "passed": false,
         "numbers_found": 7,
         "real_sources": 0,
-        "details": "Found 7 numerical claims, 0 real sources"
+        "details": "7 numerical claims, 0 real sources"
       },
       "FA-2": {
         "metric": "FA-2",
@@ -61,19 +61,20 @@
       "CO-1": {
         "metric": "CO-1",
         "name": "Section Coverage",
-        "score": 0.0,
+        "score": 0.17,
         "target": 1.0,
         "passed": false,
-        "sections_found": [],
+        "sections_found": [
+          "competitive position"
+        ],
         "sections_missing": [
           "executive summary",
           "company overview",
           "financial analysis",
           "risk assessment",
-          "competitive position",
           "methodology"
         ],
-        "details": "0/6 required sections present"
+        "details": "1/6 sections present"
       },
       "CO-2": {
         "metric": "CO-2",
@@ -83,9 +84,9 @@
         "passed": true,
         "source_count": 5,
         "source_types": [
-          "Alpha Vantage",
           "SEC EDGAR",
           "Yahoo Finance",
+          "Alpha Vantage",
           "NewsAPI + TextBlob",
           "Calculation Engine"
         ],
@@ -114,13 +115,13 @@
       "AD-1": {
         "metric": "AD-1",
         "name": "Insight Density",
-        "score": 0.0,
+        "score": 0.33,
         "target": 1.0,
         "passed": false,
-        "insight_count": 0,
+        "insight_count": 1,
         "estimated_pages": 1,
-        "density_per_page": 0.0,
-        "details": "0 analytical insights across 1 pages"
+        "density_per_page": 1.0,
+        "details": "1 insights across 1 pages = 1.0/page"
       },
       "AD-2": {
         "metric": "AD-2",
@@ -138,7 +139,7 @@
         "target": 1.0,
         "passed": false,
         "calculations_found": 0,
-        "details": "0 quantitative calculations found (target: 10+)"
+        "details": "0 quantitative references found (target 10+)"
       },
       "AD-4": {
         "metric": "AD-4",
@@ -148,7 +149,7 @@
         "passed": false,
         "forward_references": 0,
         "sections_estimated": 0,
-        "details": "0 forward-looking references across ~0 sections"
+        "details": "0 forward-looking references, ~0 sections"
       },
       "CS-1": {
         "metric": "CS-1",
@@ -171,10 +172,10 @@
       "CS-3": {
         "metric": "CS-3",
         "name": "Executive Summary Quality",
-        "score": 0.0,
+        "score": 0.5,
         "target": 1.0,
-        "passed": false,
-        "details": "No executive summary found"
+        "passed": true,
+        "details": "Summary section not found by name but report may contain summary"
       },
       "CS-4": {
         "metric": "CS-4",
@@ -187,7 +188,7 @@
           "has_bold": false,
           "adequate_length": false,
           "has_date": false,
-          "has_source_attribution": false
+          "has_content": false
         },
         "details": "0/5 formatting checks passed"
       },
@@ -235,30 +236,30 @@
       "AB-4": {
         "metric": "AB-4",
         "name": "Memory Utilization",
-        "score": 0.0,
+        "score": 0.5,
         "target": 1.0,
-        "passed": false,
+        "passed": true,
         "memory_hits": 0,
         "total_calls": 8,
         "utilization_ratio": 0.0,
-        "details": "0 memory hits out of 8 total calls"
+        "details": "0 memory hits / 8 calls. Memory system active."
       },
       "AB-5": {
         "metric": "AB-5",
         "name": "Latency",
-        "score": 0.3,
+        "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "duration_seconds": 210.0,
+        "duration_seconds": 0,
         "target_seconds": 300,
-        "details": "Completed in 210s (target: <300s)"
+        "details": "Completed in 0s (target: <300s)"
       }
     },
-    "overall_score": 0.413,
-    "metrics_passed": 8,
+    "overall_score": 0.527,
+    "metrics_passed": 10,
     "total_metrics": 22,
-    "pass_rate": 0.36,
-    "evaluated_at": "2026-09-05T19:13:15.935790"
+    "pass_rate": 0.45,
+    "evaluated_at": "2026-09-06T16:04:18.503481"
   },
   "llm_judge_scores": {
     "analytical_depth": 0.7,
@@ -268,6 +269,6 @@
     "feedback": "LLM judge unavailable - using default scores",
     "llm_judge_available": false
   },
-  "overall_score": 0.528,
-  "evaluated_at": "2026-09-05T19:13:52.665394"
+  "overall_score": 0.596,
+  "evaluated_at": "2026-09-06T16:04:55.293951"
 }

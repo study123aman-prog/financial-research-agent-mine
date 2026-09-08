@@ -15,16 +15,16 @@ load_dotenv()
 def _extract_text(response) -> str:
     """Extract text from any Gemini response format"""
     try:
-        # Try .content attribute first
         content = response.content
         if isinstance(content, str):
             return content
         if isinstance(content, list):
             for item in content:
+                if isinstance(item, dict):
+                    if item.get("type") == "text":
+                        return item.get("text", "")
                 if hasattr(item, 'text'):
                     return item.text
-                if isinstance(item, dict) and 'text' in item:
-                    return item['text']
             return str(content[0])
         if isinstance(content, dict):
             return content.get('text', str(content))

@@ -38,7 +38,13 @@ def generate_plan(query: str, query_analysis: Dict[str, Any]) -> List[str]:
         # Extract text from response
         content = response.content
         if isinstance(content, list):
-            text = content[0].text if hasattr(content[0], 'text') else str(content[0])
+            item = content[0]
+            if isinstance(item, dict):
+                text = item.get("text", str(item))
+            elif hasattr(item, 'text'):
+                text = item.text
+            else:
+                text = str(item)
         else:
             text = str(content)
 

@@ -9,9 +9,9 @@
         "score": 0.3,
         "target": 0.98,
         "passed": false,
-        "numbers_found": 217,
+        "numbers_found": 206,
         "real_sources": 0,
-        "details": "217 numerical claims, 0 real sources"
+        "details": "206 numerical claims, 0 real sources"
       },
       "FA-2": {
         "metric": "FA-2",
@@ -25,8 +25,8 @@
         "cited_in_report": [
           "Yahoo Finance",
           "Alpha Vantage",
+          "SEC EDGAR",
           "Calculation Engine",
-          "Yahoo Finance",
           "Yahoo Finance"
         ],
         "details": "7/7 sources are real"
@@ -58,13 +58,13 @@
       "FA-5": {
         "metric": "FA-5",
         "name": "Hallucination Rate",
-        "score": 0.42,
+        "score": 0.41,
         "target": 1.0,
         "passed": false,
-        "total_claims": 217,
-        "untraced_claims": 125,
-        "hallucination_rate": 0.576,
-        "details": "125 potentially unverified numerical claims"
+        "total_claims": 206,
+        "untraced_claims": 121,
+        "hallucination_rate": 0.587,
+        "details": "121 potentially unverified numerical claims"
       },
       "CO-1": {
         "metric": "CO-1",
@@ -89,15 +89,16 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "source_count": 5,
+        "source_count": 6,
         "source_types": [
-          "NewsAPI + TextBlob",
           "Yahoo Finance",
           "Web Search (mock)",
+          "SEC EDGAR",
           "Alpha Vantage",
+          "NewsAPI + TextBlob",
           "Calculation Engine"
         ],
-        "details": "5 distinct source types used (target: 4+)"
+        "details": "6 distinct source types used (target: 4+)"
       },
       "CO-3": {
         "metric": "CO-3",
@@ -114,20 +115,17 @@
       "CO-4": {
         "metric": "CO-4",
         "name": "Risk Factor Coverage",
-        "score": 0.58,
+        "score": 0.33,
         "target": 0.8,
         "passed": false,
         "risks_identified": [
-          "competition",
-          "regulatory",
           "market",
-          "operational",
           "financial",
           "technology",
-          "litigation"
+          "supply chain"
         ],
         "total_risk_categories": 12,
-        "details": "7/12 risk categories covered"
+        "details": "4/12 risk categories covered"
       },
       "AD-1": {
         "metric": "AD-1",
@@ -135,10 +133,10 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "insight_count": 12,
-        "estimated_pages": 2.6,
-        "density_per_page": 4.7,
-        "details": "12 insights across 2.6 pages = 4.7/page"
+        "insight_count": 25,
+        "estimated_pages": 2.8,
+        "density_per_page": 9.0,
+        "details": "25 insights across 2.8 pages = 9.0/page"
       },
       "AD-2": {
         "metric": "AD-2",
@@ -155,27 +153,27 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "calculations_found": 112,
-        "details": "112 quantitative references found (target 10+)"
+        "calculations_found": 63,
+        "details": "63 quantitative references found (target 10+)"
       },
       "AD-4": {
         "metric": "AD-4",
         "name": "Forward-Looking Analysis",
-        "score": 0.0,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "forward_references": 1,
-        "sections_estimated": 0,
-        "details": "1 forward-looking references, ~0 sections"
+        "passed": true,
+        "forward_references": 6,
+        "sections_estimated": 2,
+        "details": "6 forward-looking references, ~2 sections"
       },
       "CS-1": {
         "metric": "CS-1",
         "name": "Logical Flow",
-        "score": 1.0,
+        "score": 0.5,
         "target": 1.0,
-        "passed": true,
+        "passed": false,
         "sections_found": 6,
-        "details": "Sections appear in correct order"
+        "details": "Sections appear in incorrect order"
       },
       "CS-2": {
         "metric": "CS-2",
@@ -192,10 +190,10 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "word_count": 188,
+        "word_count": 202,
         "has_numbers": true,
         "has_company_reference": true,
-        "details": "Executive summary: 188 words"
+        "details": "Executive summary: 202 words"
       },
       "CS-4": {
         "metric": "CS-4",
@@ -244,8 +242,8 @@
         "keywords_covered": [
           "profile",
           "financial",
+          "sec",
           "news",
-          "peer",
           "ratio"
         ],
         "details": "7 step plan covering 5/8 key areas"
@@ -272,20 +270,20 @@
         "details": "Completed in 0s (target: <300s)"
       }
     },
-    "overall_score": 0.767,
+    "overall_score": 0.778,
     "metrics_passed": 16,
     "total_metrics": 22,
     "pass_rate": 0.73,
-    "evaluated_at": "2026-09-08T18:48:51.767969"
+    "evaluated_at": "2026-09-12T13:28:22.879254"
   },
   "llm_judge_scores": {
     "llm_judge_available": true,
-    "analytical_depth": 0.88,
-    "narrative_quality": 0.95,
+    "analytical_depth": 0.85,
+    "narrative_quality": 0.9,
     "insight_originality": 0.75,
-    "actionability": 0.9,
-    "feedback": "The report provides high-density financial metrics and strong analytical depth by clearly linking infrastructure spending to gross margin compression versus overall operating leverage.', 'extras': {'signature': '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'}}"
+    "actionability": 0.8,
+    "feedback": "The report provides strong quantitative rigor and institutional-grade framing of AI capex impacts on margins, though the excerpt cuts off before covering key executives and recent developments.', 'extras': {'signature': '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'}}"
   },
-  "overall_score": 0.825,
-  "evaluated_at": "2026-09-08T18:49:27.518601"
+  "overall_score": 0.809,
+  "evaluated_at": "2026-09-12T13:30:52.078928"
 }

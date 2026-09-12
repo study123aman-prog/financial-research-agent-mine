@@ -84,11 +84,11 @@
         "passed": true,
         "source_count": 5,
         "source_types": [
-          "SEC EDGAR",
-          "Yahoo Finance",
-          "Alpha Vantage",
           "NewsAPI + TextBlob",
-          "Calculation Engine"
+          "SEC EDGAR",
+          "Calculation Engine",
+          "Yahoo Finance",
+          "Alpha Vantage"
         ],
         "details": "5 distinct source types used (target: 4+)"
       },
@@ -259,7 +259,7 @@
     "metrics_passed": 10,
     "total_metrics": 22,
     "pass_rate": 0.45,
-    "evaluated_at": "2026-09-06T16:04:18.503481"
+    "evaluated_at": "2026-09-12T14:34:54.275288"
   },
   "llm_judge_scores": {
     "analytical_depth": 0.7,
@@ -270,5 +270,5 @@
     "llm_judge_available": false
   },
   "overall_score": 0.596,
-  "evaluated_at": "2026-09-06T16:04:55.293951"
+  "evaluated_at": "2026-09-12T14:35:30.082708"
 }

@@ -81,14 +81,15 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "source_count": 4,
+        "source_count": 5,
         "source_types": [
-          "Alpha Vantage (mock)",
-          "Calculation Engine",
           "Web Search (mock)",
-          "Yahoo Finance"
+          "Alpha Vantage",
+          "Yahoo Finance",
+          "NewsAPI + TextBlob",
+          "Graceful Degradation"
         ],
-        "details": "4 distinct source types used (target: 4+)"
+        "details": "5 distinct source types used (target: 4+)"
       },
       "CO-3": {
         "metric": "CO-3",
@@ -257,7 +258,7 @@
     "metrics_passed": 10,
     "total_metrics": 22,
     "pass_rate": 0.45,
-    "evaluated_at": "2026-09-06T17:57:43.725556"
+    "evaluated_at": "2026-09-12T14:59:00.498922"
   },
   "llm_judge_scores": {
     "analytical_depth": 0.7,
@@ -268,5 +269,5 @@
     "llm_judge_available": false
   },
   "overall_score": 0.563,
-  "evaluated_at": "2026-09-06T17:58:22.041524"
+  "evaluated_at": "2026-09-12T14:59:41.583841"
 }

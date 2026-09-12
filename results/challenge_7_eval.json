@@ -78,16 +78,15 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "source_count": 6,
+        "source_count": 5,
         "source_types": [
-          "Yahoo Finance",
-          "Alpha Vantage (mock)",
-          "Calculation Engine",
           "SEC EDGAR",
-          "Earnings Tool (mock)",
-          "NewsAPI + TextBlob"
+          "Yahoo Finance",
+          "NewsAPI + TextBlob",
+          "Alpha Vantage",
+          "Calculation Engine"
         ],
-        "details": "6 distinct source types used (target: 4+)"
+        "details": "5 distinct source types used (target: 4+)"
       },
       "CO-3": {
         "metric": "CO-3",
@@ -256,7 +255,7 @@
     "metrics_passed": 10,
     "total_metrics": 22,
     "pass_rate": 0.45,
-    "evaluated_at": "2026-09-06T16:20:08.401587"
+    "evaluated_at": "2026-09-12T14:53:27.206115"
   },
   "llm_judge_scores": {
     "analytical_depth": 0.7,
@@ -267,5 +266,5 @@
     "llm_judge_available": false
   },
   "overall_score": 0.586,
-  "evaluated_at": "2026-09-06T16:20:46.671308"
+  "evaluated_at": "2026-09-12T14:54:08.957487"
 }

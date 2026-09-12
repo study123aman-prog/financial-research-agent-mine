@@ -68,11 +68,8 @@ def run_challenge(number: int):
     result["duration_seconds"] = duration
 
     report = result_copy.get("final_report", "")
-    print(f"[Debug] final_report type: {type(report)}, length: {len(str(report))}")
-    print(f"[Debug] synthesis length: {len(str(result_copy.get('synthesis', '')))}")
 
     if not report or len(str(report)) < 100:
-        print("[Debug] final_report empty, using synthesis instead")
         report = result_copy.get("synthesis", "No report generated")
 
     if isinstance(report, list):

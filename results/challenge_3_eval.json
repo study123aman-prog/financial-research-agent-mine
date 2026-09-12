@@ -9,9 +9,9 @@
         "score": 0.3,
         "target": 0.98,
         "passed": false,
-        "numbers_found": 5,
+        "numbers_found": 193,
         "real_sources": 0,
-        "details": "5 numerical claims, 0 real sources"
+        "details": "193 numerical claims, 0 real sources"
       },
       "FA-2": {
         "metric": "FA-2",
@@ -19,62 +19,75 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "total_sources": 8,
-        "real_sources": 8,
+        "total_sources": 7,
+        "real_sources": 7,
         "mock_sources": 0,
-        "cited_in_report": [],
-        "details": "8/8 sources are real"
+        "cited_in_report": [
+          "SEC EDGAR",
+          "Alpha Vantage",
+          "Calculation Engine",
+          "NewsAPI + TextBlob",
+          "Yahoo Finance",
+          "NewsAPI + TextBlob",
+          "Calculation Engine"
+        ],
+        "details": "7/7 sources are real"
       },
       "FA-3": {
         "metric": "FA-3",
         "name": "Temporal Accuracy",
-        "score": 0.5,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "years_referenced": [],
+        "passed": true,
+        "years_referenced": [
+          "2025",
+          "2023",
+          "2024",
+          "2026",
+          "2021"
+        ],
         "future_years_found": [],
-        "details": "Found 0 valid year references, 0 future dates"
+        "details": "Found 33 valid year references, 0 future dates"
       },
       "FA-4": {
         "metric": "FA-4",
         "name": "Entity Accuracy",
-        "score": 0.0,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "entities_found": [],
-        "entities_missing": [
+        "passed": true,
+        "entities_found": [
           "TSLA"
         ],
-        "details": "0/1 expected entities found in report"
+        "entities_missing": [],
+        "details": "1/1 expected entities found in report"
       },
       "FA-5": {
         "metric": "FA-5",
         "name": "Hallucination Rate",
-        "score": 0.4,
+        "score": 0.34,
         "target": 1.0,
         "passed": false,
-        "total_claims": 5,
-        "untraced_claims": 3,
-        "hallucination_rate": 0.6,
-        "details": "3 potentially unverified numerical claims"
+        "total_claims": 193,
+        "untraced_claims": 128,
+        "hallucination_rate": 0.663,
+        "details": "128 potentially unverified numerical claims"
       },
       "CO-1": {
         "metric": "CO-1",
         "name": "Section Coverage",
-        "score": 0.33,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
+        "passed": true,
         "sections_found": [
-          "risk assessment",
-          "competitive position"
-        ],
-        "sections_missing": [
           "executive summary",
           "company overview",
           "financial analysis",
+          "risk assessment",
+          "competitive position",
           "methodology"
         ],
-        "details": "2/6 sections present"
+        "sections_missing": [],
+        "details": "6/6 sections present"
       },
       "CO-2": {
         "metric": "CO-2",
@@ -82,49 +95,58 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "source_count": 6,
+        "source_count": 5,
         "source_types": [
-          "Alpha Vantage (mock)",
           "Yahoo Finance",
+          "Alpha Vantage",
+          "Calculation Engine",
           "NewsAPI + TextBlob",
-          "SEC EDGAR",
-          "Earnings Tool (mock)",
-          "Calculation Engine"
+          "SEC EDGAR"
         ],
-        "details": "6 distinct source types used (target: 4+)"
+        "details": "5 distinct source types used (target: 4+)"
       },
       "CO-3": {
         "metric": "CO-3",
         "name": "Temporal Coverage",
-        "score": 0.0,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "details": "No year references found in report"
+        "passed": true,
+        "years_found": [
+          2021,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "year_range": 6,
+        "details": "Covers 6 years from 2021 to 2026"
       },
       "CO-4": {
         "metric": "CO-4",
         "name": "Risk Factor Coverage",
-        "score": 0.25,
+        "score": 0.42,
         "target": 0.8,
         "passed": false,
         "risks_identified": [
           "regulatory",
+          "market",
           "operational",
-          "financial"
+          "financial",
+          "technology"
         ],
         "total_risk_categories": 12,
-        "details": "3/12 risk categories covered"
+        "details": "5/12 risk categories covered"
       },
       "AD-1": {
         "metric": "AD-1",
         "name": "Insight Density",
-        "score": 0.33,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "insight_count": 1,
-        "estimated_pages": 1,
-        "density_per_page": 1.0,
-        "details": "1 insights across 1 pages = 1.0/page"
+        "passed": true,
+        "insight_count": 17,
+        "estimated_pages": 2.1,
+        "density_per_page": 8.0,
+        "details": "17 insights across 2.1 pages = 8.0/page"
       },
       "AD-2": {
         "metric": "AD-2",
@@ -138,11 +160,11 @@
       "AD-3": {
         "metric": "AD-3",
         "name": "Quantitative Reasoning",
-        "score": 0.0,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "calculations_found": 0,
-        "details": "0 quantitative references found (target 10+)"
+        "passed": true,
+        "calculations_found": 118,
+        "details": "118 quantitative references found (target 10+)"
       },
       "AD-4": {
         "metric": "AD-4",
@@ -150,18 +172,18 @@
         "score": 0.0,
         "target": 1.0,
         "passed": false,
-        "forward_references": 0,
+        "forward_references": 2,
         "sections_estimated": 0,
-        "details": "0 forward-looking references, ~0 sections"
+        "details": "2 forward-looking references, ~0 sections"
       },
       "CS-1": {
         "metric": "CS-1",
         "name": "Logical Flow",
-        "score": 0.5,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
-        "sections_found": 3,
-        "details": "Sections appear in incorrect order"
+        "passed": true,
+        "sections_found": 6,
+        "details": "Sections appear in correct order"
       },
       "CS-2": {
         "metric": "CS-2",
@@ -175,25 +197,28 @@
       "CS-3": {
         "metric": "CS-3",
         "name": "Executive Summary Quality",
-        "score": 0.5,
+        "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "details": "Summary section not found by name but report may contain summary"
+        "word_count": 201,
+        "has_numbers": true,
+        "has_company_reference": true,
+        "details": "Executive summary: 201 words"
       },
       "CS-4": {
         "metric": "CS-4",
         "name": "Professional Formatting",
-        "score": 0.0,
+        "score": 1.0,
         "target": 1.0,
-        "passed": false,
+        "passed": true,
         "checks": {
-          "has_headers": false,
-          "has_bold": false,
-          "adequate_length": false,
-          "has_date": false,
-          "has_content": false
+          "has_headers": true,
+          "has_bold": true,
+          "adequate_length": true,
+          "has_date": true,
+          "has_content": true
         },
-        "details": "0/5 formatting checks passed"
+        "details": "5/5 formatting checks passed"
       },
       "AB-1": {
         "metric": "AB-1",
@@ -201,10 +226,10 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "total_calls": 8,
-        "useful_calls": 8,
+        "total_calls": 7,
+        "useful_calls": 7,
         "efficiency_rate": 1.0,
-        "details": "8/8 tool calls were useful (100%)"
+        "details": "7/7 tool calls were useful (100%)"
       },
       "AB-2": {
         "metric": "AB-2",
@@ -220,21 +245,18 @@
       "AB-3": {
         "metric": "AB-3",
         "name": "Planning Quality",
-        "score": 1.0,
+        "score": 0.74,
         "target": 1.0,
         "passed": true,
-        "plan_steps": 8,
+        "plan_steps": 7,
         "keywords_covered": [
-          "profile",
           "financial",
           "sec",
           "news",
-          "price",
           "peer",
-          "earnings",
           "ratio"
         ],
-        "details": "8 step plan covering 8/8 key areas"
+        "details": "7 step plan covering 5/8 key areas"
       },
       "AB-4": {
         "metric": "AB-4",
@@ -243,9 +265,9 @@
         "target": 1.0,
         "passed": true,
         "memory_hits": 0,
-        "total_calls": 8,
+        "total_calls": 7,
         "utilization_ratio": 0.0,
-        "details": "0 memory hits / 8 calls. Memory system active."
+        "details": "0 memory hits / 7 calls. Memory system active."
       },
       "AB-5": {
         "metric": "AB-5",
@@ -258,11 +280,11 @@
         "details": "Completed in 0s (target: <300s)"
       }
     },
-    "overall_score": 0.482,
-    "metrics_passed": 9,
+    "overall_score": 0.786,
+    "metrics_passed": 17,
     "total_metrics": 22,
-    "pass_rate": 0.41,
-    "evaluated_at": "2026-09-06T21:28:37.072378"
+    "pass_rate": 0.77,
+    "evaluated_at": "2026-09-12T14:23:53.086883"
   },
   "llm_judge_scores": {
     "analytical_depth": 0.7,
@@ -272,6 +294,6 @@
     "feedback": "LLM judge unavailable - using default scores",
     "llm_judge_available": false
   },
-  "overall_score": 0.569,
-  "evaluated_at": "2026-09-06T21:28:38.706626"
+  "overall_score": 0.752,
+  "evaluated_at": "2026-09-12T14:24:35.345240"
 }

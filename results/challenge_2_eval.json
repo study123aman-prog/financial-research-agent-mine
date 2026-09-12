@@ -9,9 +9,9 @@
         "score": 0.3,
         "target": 0.98,
         "passed": false,
-        "numbers_found": 224,
+        "numbers_found": 133,
         "real_sources": 0,
-        "details": "224 numerical claims, 0 real sources"
+        "details": "133 numerical claims, 0 real sources"
       },
       "FA-2": {
         "metric": "FA-2",
@@ -19,19 +19,17 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "total_sources": 8,
-        "real_sources": 8,
+        "total_sources": 7,
+        "real_sources": 7,
         "mock_sources": 0,
         "cited_in_report": [
-          "Yahoo Finance",
           "Alpha Vantage",
-          "SEC EDGAR",
-          "Yahoo Finance",
+          "Alpha Vantage",
           "Calculation Engine",
-          "Yahoo Finance",
+          "Alpha Vantage",
           "Alpha Vantage"
         ],
-        "details": "8/8 sources are real"
+        "details": "7/7 sources are real"
       },
       "FA-3": {
         "metric": "FA-3",
@@ -40,11 +38,11 @@
         "target": 1.0,
         "passed": true,
         "years_referenced": [
-          "2025",
-          "2026"
+          "2026",
+          "2025"
         ],
         "future_years_found": [],
-        "details": "Found 5 valid year references, 0 future dates"
+        "details": "Found 14 valid year references, 0 future dates"
       },
       "FA-4": {
         "metric": "FA-4",
@@ -61,13 +59,13 @@
       "FA-5": {
         "metric": "FA-5",
         "name": "Hallucination Rate",
-        "score": 0.46,
+        "score": 0.57,
         "target": 1.0,
         "passed": false,
-        "total_claims": 224,
-        "untraced_claims": 120,
-        "hallucination_rate": 0.536,
-        "details": "120 potentially unverified numerical claims"
+        "total_claims": 133,
+        "untraced_claims": 57,
+        "hallucination_rate": 0.429,
+        "details": "57 potentially unverified numerical claims"
       },
       "CO-1": {
         "metric": "CO-1",
@@ -89,18 +87,16 @@
       "CO-2": {
         "metric": "CO-2",
         "name": "Data Source Diversity",
-        "score": 1.0,
+        "score": 0.75,
         "target": 1.0,
-        "passed": true,
-        "source_count": 5,
+        "passed": false,
+        "source_count": 3,
         "source_types": [
           "Calculation Engine",
-          "NewsAPI + TextBlob",
-          "SEC EDGAR",
-          "Alpha Vantage",
-          "Yahoo Finance"
+          "Web Search (mock)",
+          "Alpha Vantage"
         ],
-        "details": "5 distinct source types used (target: 4+)"
+        "details": "3 distinct source types used (target: 4+)"
       },
       "CO-3": {
         "metric": "CO-3",
@@ -118,19 +114,18 @@
       "CO-4": {
         "metric": "CO-4",
         "name": "Risk Factor Coverage",
-        "score": 0.5,
+        "score": 0.42,
         "target": 0.8,
         "passed": false,
         "risks_identified": [
-          "regulatory",
           "market",
           "operational",
           "financial",
           "technology",
-          "interest rate"
+          "currency"
         ],
         "total_risk_categories": 12,
-        "details": "6/12 risk categories covered"
+        "details": "5/12 risk categories covered"
       },
       "AD-1": {
         "metric": "AD-1",
@@ -138,19 +133,19 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "insight_count": 14,
-        "estimated_pages": 2.2,
+        "insight_count": 10,
+        "estimated_pages": 1.6,
         "density_per_page": 6.3,
-        "details": "14 insights across 2.2 pages = 6.3/page"
+        "details": "10 insights across 1.6 pages = 6.3/page"
       },
       "AD-2": {
         "metric": "AD-2",
         "name": "Cross-Source Synthesis",
-        "score": 0.0,
+        "score": 0.2,
         "target": 1.0,
         "passed": false,
-        "synthesis_instances": 0,
-        "details": "0 cross-source synthesis instances (target: 5+)"
+        "synthesis_instances": 1,
+        "details": "1 cross-source synthesis instances (target: 5+)"
       },
       "AD-3": {
         "metric": "AD-3",
@@ -158,8 +153,8 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "calculations_found": 75,
-        "details": "75 quantitative references found (target 10+)"
+        "calculations_found": 11,
+        "details": "11 quantitative references found (target 10+)"
       },
       "AD-4": {
         "metric": "AD-4",
@@ -167,18 +162,18 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "forward_references": 16,
-        "sections_estimated": 5,
-        "details": "16 forward-looking references, ~5 sections"
+        "forward_references": 11,
+        "sections_estimated": 3,
+        "details": "11 forward-looking references, ~3 sections"
       },
       "CS-1": {
         "metric": "CS-1",
         "name": "Logical Flow",
-        "score": 1.0,
+        "score": 0.5,
         "target": 1.0,
-        "passed": true,
+        "passed": false,
         "sections_found": 6,
-        "details": "Sections appear in correct order"
+        "details": "Sections appear in incorrect order"
       },
       "CS-2": {
         "metric": "CS-2",
@@ -195,10 +190,10 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "word_count": 210,
+        "word_count": 202,
         "has_numbers": true,
         "has_company_reference": true,
-        "details": "Executive summary: 210 words"
+        "details": "Executive summary: 202 words"
       },
       "CS-4": {
         "metric": "CS-4",
@@ -221,10 +216,10 @@
         "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "total_calls": 8,
-        "useful_calls": 8,
+        "total_calls": 7,
+        "useful_calls": 7,
         "efficiency_rate": 1.0,
-        "details": "8/8 tool calls were useful (100%)"
+        "details": "7/7 tool calls were useful (100%)"
       },
       "AB-2": {
         "metric": "AB-2",
@@ -240,21 +235,16 @@
       "AB-3": {
         "metric": "AB-3",
         "name": "Planning Quality",
-        "score": 1.0,
+        "score": 0.56,
         "target": 1.0,
-        "passed": true,
-        "plan_steps": 8,
+        "passed": false,
+        "plan_steps": 7,
         "keywords_covered": [
-          "profile",
           "financial",
           "sec",
-          "news",
-          "price",
-          "peer",
-          "earnings",
-          "ratio"
+          "earnings"
         ],
-        "details": "8 step plan covering 8/8 key areas"
+        "details": "7 step plan covering 3/8 key areas"
       },
       "AB-4": {
         "metric": "AB-4",
@@ -263,35 +253,35 @@
         "target": 1.0,
         "passed": true,
         "memory_hits": 0,
-        "total_calls": 8,
+        "total_calls": 7,
         "utilization_ratio": 0.0,
-        "details": "0 memory hits / 8 calls. Memory system active."
+        "details": "0 memory hits / 7 calls. Memory system active."
       },
       "AB-5": {
         "metric": "AB-5",
         "name": "Latency",
-        "score": 0.3,
+        "score": 1.0,
         "target": 1.0,
         "passed": true,
-        "duration_seconds": 210.4,
+        "duration_seconds": 0,
         "target_seconds": 300,
-        "details": "Completed in 210s (target: <300s)"
+        "details": "Completed in 0s (target: <300s)"
       }
     },
-    "overall_score": 0.806,
-    "metrics_passed": 17,
+    "overall_score": 0.794,
+    "metrics_passed": 14,
     "total_metrics": 22,
-    "pass_rate": 0.77,
-    "evaluated_at": "2026-09-06T15:02:42.538551"
+    "pass_rate": 0.64,
+    "evaluated_at": "2026-09-12T14:19:08.028736"
   },
   "llm_judge_scores": {
     "llm_judge_available": true,
-    "analytical_depth": 0.8,
-    "narrative_quality": 0.9,
-    "insight_originality": 0.65,
-    "actionability": 0.8,
-    "feedback": "The report is exceptionally well-structured and offers clear quantitative comparisons with rigorous citations, though its strategic insights largely reflect standard market consensus.', 'extras': {'signature': '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'}}"
+    "analytical_depth": 0.5,
+    "narrative_quality": 0.8,
+    "insight_originality": 0.4,
+    "actionability": 0.5,
+    "feedback": "The report presents a well-structured EPS surprise analysis, but fails to deliver revenue comparisons or key takeaways from the earnings call as requested in the prompt.', 'extras': {'signature': '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'}}"
   },
-  "overall_score": 0.819,
-  "evaluated_at": "2026-09-06T15:03:09.341627"
+  "overall_score": 0.721,
+  "evaluated_at": "2026-09-12T14:19:19.951114"
 }

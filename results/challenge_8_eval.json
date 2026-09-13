@@ -83,11 +83,11 @@
         "passed": true,
         "source_count": 5,
         "source_types": [
-          "Web Search (mock)",
+          "Graceful Degradation",
+          "NewsAPI + TextBlob",
           "Alpha Vantage",
           "Yahoo Finance",
-          "NewsAPI + TextBlob",
-          "Graceful Degradation"
+          "SEC EDGAR"
         ],
         "details": "5 distinct source types used (target: 4+)"
       },
@@ -258,7 +258,7 @@
     "metrics_passed": 10,
     "total_metrics": 22,
     "pass_rate": 0.45,
-    "evaluated_at": "2026-09-12T14:59:00.498922"
+    "evaluated_at": "2026-09-13T13:44:00.555554"
   },
   "llm_judge_scores": {
     "analytical_depth": 0.7,
@@ -269,5 +269,5 @@
     "llm_judge_available": false
   },
   "overall_score": 0.563,
-  "evaluated_at": "2026-09-12T14:59:41.583841"
+  "evaluated_at": "2026-09-13T13:44:40.517447"
 }

@@ -1,5 +1,5 @@
 # ARA-1 Evaluation Report
-**Generated:** 2026-09-13 15:05
+**Generated:** 2026-09-14 12:44
 **Agent:** ARA-1 Autonomous Financial Research Agent
 **Author:** Aman Singh
 
@@ -7,8 +7,8 @@
 
 ## Overall Performance Summary
 
-**Average Score:** 69.7%
-**Total Metrics Passed:** 113/176
+**Average Score:** 74.5%
+**Total Metrics Passed:** 124/176
 **Challenges Evaluated:** 8/8
 
 | Challenge | Score | Metrics Passed | LLM Judge |
@@ -19,8 +19,8 @@
 | C4 | 69.7% | 15/22 | 50.0% |
 | C5 | 83.1% | 16/22 | 85.0% |
 | C6 | 62.0% | 15/22 | 20.0% |
-| C7 | 58.6% | 10/22 | 70.0% |
-| C8 | 56.3% | 10/22 | 70.0% |
+| C7 | 71.1% | 15/22 | 50.0% |
+| C8 | 82.1% | 16/22 | 85.0% |
 
 ---
 
@@ -226,67 +226,67 @@
 
 ### Challenge 7
 **Query:** Based on the companies you have already researched, what themes emerge across the technology sector?
-**Overall Score:** 58.6%
+**Overall Score:** 71.1%
 
 | Metric | Name | Score | Passed |
 |---|---|---|---|
 | FA-1 | Numerical Accuracy Rate | 30% | ✗ |
 | FA-2 | Citation Accuracy | 100% | ✓ |
-| FA-3 | Temporal Accuracy | 50% | ✗ |
+| FA-3 | Temporal Accuracy | 100% | ✓ |
 | FA-4 | Entity Accuracy | 100% | ✓ |
-| FA-5 | Hallucination Rate | 67% | ✗ |
-| CO-1 | Section Coverage | 17% | ✗ |
+| FA-5 | Hallucination Rate | 32% | ✗ |
+| CO-1 | Section Coverage | 100% | ✓ |
 | CO-2 | Data Source Diversity | 100% | ✓ |
-| CO-3 | Temporal Coverage | 0% | ✗ |
-| CO-4 | Risk Factor Coverage | 8% | ✗ |
-| AD-1 | Insight Density | 0% | ✗ |
+| CO-3 | Temporal Coverage | 67% | ✗ |
+| CO-4 | Risk Factor Coverage | 58% | ✗ |
+| AD-1 | Insight Density | 100% | ✓ |
 | AD-2 | Cross-Source Synthesis | 0% | ✗ |
-| AD-3 | Quantitative Reasoning | 0% | ✗ |
-| AD-4 | Forward-Looking Analysis | 0% | ✗ |
+| AD-3 | Quantitative Reasoning | 100% | ✓ |
+| AD-4 | Forward-Looking Analysis | 50% | ✗ |
 | CS-1 | Logical Flow | 50% | ✗ |
 | CS-2 | Internal Consistency | 100% | ✓ |
-| CS-3 | Executive Summary Quality | 50% | ✓ |
-| CS-4 | Professional Formatting | 0% | ✗ |
+| CS-3 | Executive Summary Quality | 100% | ✓ |
+| CS-4 | Professional Formatting | 100% | ✓ |
 | AB-1 | Tool Efficiency | 100% | ✓ |
 | AB-2 | Error Recovery Rate | 100% | ✓ |
-| AB-3 | Planning Quality | 100% | ✓ |
+| AB-3 | Planning Quality | 82% | ✓ |
 | AB-4 | Memory Utilization | 50% | ✓ |
 | AB-5 | Latency | 100% | ✓ |
 
-**LLM Judge Feedback:** LLM judge unavailable - using default scores
+**LLM Judge Feedback:** While the report presents strong financial detail and professional prose for Apple Inc., it fails to address the prompt's request for a multi-company synthesis of cross-cutting technology sector themes, risks, and opportunities.", 'extras': {'signature': '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'}}
 
 ---
 
 ### Challenge 8
 **Query:** Produce a complete investment research report on NVIDIA Corporation. Note: The financial data API an
-**Overall Score:** 56.3%
+**Overall Score:** 82.1%
 
 | Metric | Name | Score | Passed |
 |---|---|---|---|
 | FA-1 | Numerical Accuracy Rate | 30% | ✗ |
 | FA-2 | Citation Accuracy | 100% | ✓ |
-| FA-3 | Temporal Accuracy | 50% | ✗ |
-| FA-4 | Entity Accuracy | 0% | ✗ |
-| FA-5 | Hallucination Rate | 100% | ✓ |
-| CO-1 | Section Coverage | 0% | ✗ |
+| FA-3 | Temporal Accuracy | 100% | ✓ |
+| FA-4 | Entity Accuracy | 100% | ✓ |
+| FA-5 | Hallucination Rate | 45% | ✗ |
+| CO-1 | Section Coverage | 100% | ✓ |
 | CO-2 | Data Source Diversity | 100% | ✓ |
-| CO-3 | Temporal Coverage | 0% | ✗ |
-| CO-4 | Risk Factor Coverage | 8% | ✗ |
-| AD-1 | Insight Density | 0% | ✗ |
+| CO-3 | Temporal Coverage | 100% | ✓ |
+| CO-4 | Risk Factor Coverage | 50% | ✗ |
+| AD-1 | Insight Density | 100% | ✓ |
 | AD-2 | Cross-Source Synthesis | 0% | ✗ |
-| AD-3 | Quantitative Reasoning | 0% | ✗ |
+| AD-3 | Quantitative Reasoning | 100% | ✓ |
 | AD-4 | Forward-Looking Analysis | 0% | ✗ |
 | CS-1 | Logical Flow | 50% | ✗ |
 | CS-2 | Internal Consistency | 100% | ✓ |
-| CS-3 | Executive Summary Quality | 50% | ✓ |
-| CS-4 | Professional Formatting | 0% | ✗ |
+| CS-3 | Executive Summary Quality | 100% | ✓ |
+| CS-4 | Professional Formatting | 100% | ✓ |
 | AB-1 | Tool Efficiency | 100% | ✓ |
 | AB-2 | Error Recovery Rate | 100% | ✓ |
-| AB-3 | Planning Quality | 100% | ✓ |
+| AB-3 | Planning Quality | 82% | ✓ |
 | AB-4 | Memory Utilization | 50% | ✓ |
 | AB-5 | Latency | 100% | ✓ |
 
-**LLM Judge Feedback:** LLM judge unavailable - using default scores
+**LLM Judge Feedback:** The report is exceptionally well-structured and highly actionable, offering clear quantitative growth context and nuanced margin analysis regarding server rack transitions, though its insights generally reflect established market narratives.', 'extras': {'signature': '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'}}
 
 ---
 
